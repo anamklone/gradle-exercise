@@ -10,23 +10,16 @@ public class App {
 		return res;
 	}
 	public static int Lazy(int n) {
-		int res = (n*n + n +2)/2;
-
-		return res;
+		return (n*n + n +2)/2;
 	}
 	public static void main(String[] args) {
-		if(args.length < 2){
-			System.out.println("Not enough arg provided");
-			System.exit(1);
-		}else{
-			if(Integer.parseInt(args[1]) < 0){
-				System.out.println("Integer should be non-negative");
-				System.exit(1);
-			}
-		}
-
 		try{
 
+			if(Integer.parseInt(args[1]) < 0){
+				System.out.println("non-negative integer should be used");
+				System.exit(1);
+			}
+			
 			if(args[0].equals("triangle")){
 				System.out.println(App.Tri(Integer.parseInt(args[1])));
 			} else if(args[0].equals("lazy")) {
@@ -37,7 +30,8 @@ public class App {
 			}
 		} catch(Exception e){
 
-			System.out.println("Second arg should be non-negative integer value");
+			System.out.println("There should be 2 args");
+			System.exit(1);
 
 		}
 	}
