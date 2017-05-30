@@ -11,7 +11,7 @@ public class App {
 	}
 	public static int Lazy(int n) {
 		int res = (n*n + n +2)/2;
-		
+
 		return res;
 	}
 	public static void main(String[] args) {
@@ -24,13 +24,13 @@ public class App {
 				System.exit(1);
 			}
 		}
-		
+
 		try{
 
 			if(args[0].equals("triangle")){
-				System.out.println(App.Tri(Integer.parseInt(args[1])) + "\nShould be 15");
+				System.out.println(App.Tri(Integer.parseInt(args[1])));
 			} else if(args[0].equals("lazy")) {
-				System.out.println(App.Lazy(Integer.parseInt(args[1])) + "\nShould be 16");
+				System.out.println(App.Lazy(Integer.parseInt(args[1])));
 			} else {
 				System.out.println("Invalid arg");
 				System.exit(1);
