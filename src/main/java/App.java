@@ -19,11 +19,11 @@ public class App {
 				System.out.println("non-negative integer should be used");
 				System.exit(1);
 			}
-			
+
 			if(args[0].equals("triangle")){
-				System.out.println(App.Tri(Integer.parseInt(args[1])));
+				System.out.println("Tri(" + args[1] + ") = " + App.Tri(Integer.parseInt(args[1])));
 			} else if(args[0].equals("lazy")) {
-				System.out.println(App.Lazy(Integer.parseInt(args[1])));
+				System.out.println("Lazy(" + args[1] + ") = " + App.Lazy(Integer.parseInt(args[1])));
 			} else {
 				System.out.println("Invalid arg");
 				System.exit(1);
