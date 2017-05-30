@@ -23,4 +23,18 @@ public class AppTest {
     public void triangleTest15() {
       assertEquals(120, App.Tri(15));
     }
+
+    @Test
+    public void lazyTest2() {
+      assertEquals(App.Lazy(2), 4);
+    }
+
+    @Test
+    public void lazyTest7() {
+      assertEquals(App.Lazy(7), 29);
+    }
+
+    public void lazyTest15() {
+      assertEquals(App.Lazy(15), 121);
+    }
 }
