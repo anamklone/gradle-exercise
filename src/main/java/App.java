@@ -15,13 +15,22 @@ public class App {
 			System.out.println("Not enough arg provided");
 			System.exit(1);
 		}
-		if(args[0].equals("triangle")){
-			System.out.println(App.Tri(args[1]) + "\nShould be 15");
-		} else if(args[0].equals("lazy")) {
-			System.out.println(App.Lazy(args[1]) + "\nShould be 15");
-		} else {
-			System.out.println("Invalid arg")
-			System.exit(1);
+		if(args[1] < 0){
+			System.out.println("Integer should be non-negative");
+		}
+		try{
+			if(args[0].equals("triangle")){
+				System.out.println(App.Tri(args[1]) + "\nShould be 15");
+			} else if(args[0].equals("lazy")) {
+				System.out.println(App.Lazy(args[1]) + "\nShould be 15");
+			} else {
+				System.out.println("Invalid arg")
+				System.exit(1);
+			}
+		} catch(exception e){
+
+			System.out.println("Second arg should be non-negative integer value");
+
 		}
 	}
 }

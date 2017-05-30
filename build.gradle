@@ -16,7 +16,7 @@ apply plugin: 'application'
 repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
@@ -30,3 +30,19 @@ dependencies {
 // Define the main class for the application
 mainClassName = 'App'
 
+
+task sequencehelp << {
+   println "Integer Sequence Project"
+   println "This app takes two args, a string: 'lazy' or a string 'triangle' and a non-negative integer"
+  
+}
+
+run {
+    try {
+        systemProperties System.getProperties()
+	args System.getProperty("args").split()
+    } catch (Exception e) {
+        // Do nothing
+    }
+	
+}
